@@ -98,31 +98,33 @@ This repository contains the configuration files for deploying a simple Apache w
   
 ## Connect to the kubernetes cluster:
 
-```bash
-USING DOCTL
+1. using doctl --
 
-1. using doctl -- doctl kubernetes cluster kubeconfig save <your-cluster-name>
+```bash
+ doctl kubernetes cluster kubeconfig save <your-cluster-name>
 ```
 
+2. using kubectl
+
 ```bash
-USING KUBECTL
+kubectl config get-contexts (You should see your DigitalOcean Kubernetes cluster context listed.  If you have multiple contexts, you might need to switch to the correct one:)
 
-1. kubectl config get-contexts (You should see your DigitalOcean Kubernetes cluster context listed.  If you have multiple contexts, you might need to switch to the correct one:)
-
-2. kubectl config use-context <your-cluster-context-name>
+kubectl config use-context <your-cluster-context-name>
 ```
 
  ## Deploy the application
  
  ```bash
 
- 1. kubectl apply -f  namespaceamitesh.yaml
- 2. kubectl apply -f . (this will deploy all the files together)
+ kubectl apply -f  namespaceamitesh.yaml
+
+kubectl apply -f . (this will deploy all the files together)
 
  ```
-```bash
 
 Let's delve into the concepts of Pods, Services, namespace, and Deployments in Kubernetes
+
+```bash
 
 * Since a dedicated namespace has been created for this application, it's crucial to specify the namespace when executing kubectl commands.  You can do this in two ways:
 
@@ -142,17 +144,14 @@ Let's delve into the concepts of Pods, Services, namespace, and Deployments in K
 
 ## Destroy the application
 
-```bash
-
 To delete the application
 
+```bash
 kubectl delete -f .
 ```
 
-```bash
-
 To delete the cluster
 
+```bash
 doctl kubernetes cluster delete <your-cluster-name>
-
 ```
