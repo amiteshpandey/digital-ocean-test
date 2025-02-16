@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: digital-ocean
+  namespace: amitesh
+spec:
+  replicas: 1 # Set the number of replicas
+  selector:
+    matchLabels:
+      app: digital-ocean
+  template:
+    metadata:
+      labels:
+        app: digital-ocean
+    spec:
+      containers:
+      - name: digital-ocean
+        image: amitesh013/my-do-image-2:final
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "1"
+            memory: "1Gi"
