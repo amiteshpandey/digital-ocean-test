@@ -70,7 +70,7 @@ This repository contains the configuration files for deploying a simple Apache w
 5.  Configure the number of nodes in your node pool.
 6.  Click "Create Cluster".
 
-### Using `doctl` (CLI):
+## Using `doctl` (CLI):
 
 1.  Authenticate `doctl`:
 
@@ -96,7 +96,7 @@ This repository contains the configuration files for deploying a simple Apache w
       --version latest \
       --node-pool name=pool-0 size=s-2vcpu-4gb count static website.</h1>
   
-### Connect to the kubernetes cluster:
+## Connect to the kubernetes cluster:
 
 ```bash
 USING DOCTL
@@ -112,7 +112,7 @@ USING KUBECTL
 2. kubectl config use-context <your-cluster-context-name>
 ```
 
- ### Deploy the application
+ ## Deploy the application
  
  ```bash
 
@@ -122,7 +122,7 @@ USING KUBECTL
  ```
 ```bash
 
-Let's delve into the concepts of Pods, Services, and Deployments in Kubernetes
+Let's delve into the concepts of Pods, Services, namespace, and Deployments in Kubernetes
 
 * Since a dedicated namespace has been created for this application, it's crucial to specify the namespace when executing kubectl commands.  You can do this in two ways:
 
@@ -140,7 +140,7 @@ Let's delve into the concepts of Pods, Services, and Deployments in Kubernetes
 * To get information about resource in the namespace use - kubectl get all
 ```
 
-### Destroy the application
+## Destroy the application
 
 ```bash
 
