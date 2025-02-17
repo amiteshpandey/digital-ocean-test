@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: digital-ocean-service
   namespace: amitesh
+  annotations:
+    service.beta.kubernetes.io/do-loadbalancer-size-unit: "2"
 spec:
   selector:
     app: digital-ocean # Must match Deployment labels
