@@ -1,8 +1,8 @@
-<h2>This project demonstrates a simple web application deployed on a DigitalOcean Kubernetes cluster. It serves a styled "Welcome to DigitalOcean!" webpage using the Apache HTTP server.</h2>
+<h2>"Welcome to DigitalOcean!" using the Apache HTTP server.</h2>
 
 ## Overview
 
-This repository contains the configuration files for deploying a simple Apache web application to DigitalOcean Kubernetes.
+This project demonstrates a simple web application deployed on a DigitalOcean Kubernetes cluster. This repository contains the configuration files for deploying a simple Apache web application to DigitalOcean Kubernetes. 
 
 ## Prerequisites
 
